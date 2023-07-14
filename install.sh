@@ -135,7 +135,7 @@ _install() {
     tempd="$(mktemp -d)" &&
       trap "echo 'Cleaning up temporary files ...'; rm -f $tempd/*; rmdir $tempd" EXIT
     temp="$tempd/${SERVICE}-nag-buster.sh"
-    wget https://raw.githubusercontent.com/foundObjects/pve-nag-buster/master/${SERVICE}-nag-buster.sh \
+    wget https://raw.githubusercontent.com/nigelterry/pve-nag-buster/master/${SERVICE}-nag-buster.sh \
       -q --show-progress -O "$temp"
   fi
   echo "Installing hook script as /usr/share/${SERVICE}-nag-buster.sh"
